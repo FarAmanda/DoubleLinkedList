@@ -6,21 +6,25 @@
 namespace NodeP
 {
 	/* Member Functions for Nodes
+	* 
 	*/
+
+	//Default Constructor
 	Node::Node() 
-		{
-			data = 0;
-			next = NULL;
-			previous = NULL;
-		}
-
+	{
+		data = 0;
+		next = NULL;
+		previous = NULL;
+	}
+	//Parametic Constructor #1
 	Node::Node(int x) 
-		{
-			this->data = x;
-			this->next = NULL;
-			this->previous = NULL;
-		}
+	{
+		this->data = x;
+		this->next = NULL;
+		this->previous = NULL;
+	}
 
+	// Parametic Constructor #2
 	Node::Node(int x, Node* following, Node* before) {
 			this->data = x;
 			this->next = following;
@@ -28,6 +32,7 @@ namespace NodeP
 		}
 
 	/* Member Functions for Linked List
+	* 
 	*/
 
 	// Constructors
@@ -37,12 +42,14 @@ namespace NodeP
 		tail_ptr = NULL;
 	}
 
+	// Parametic Constructor #1
 	LinkedList::LinkedList(Node* x)
 	{
 		head_ptr = x;
 		tail_ptr = x; 
 	}
 
+	//Parametic Constructor #2
 	void LinkedList::AddToTail(int x)
 	{
 		Node* insert_ptr = new Node;
@@ -68,16 +75,19 @@ namespace NodeP
 		}
 	}
 
+	// Print Elemenents in order
 	void LinkedList::PrintElements()
 	{
 		Node* current_ptr = head_ptr;
 		while (current_ptr != NULL)
 		{
-			std::cout << current_ptr->data << "<-->[ ";
+			std::cout << current_ptr->data << ", ";
 			current_ptr = current_ptr->next;
 		}
 
 	}
+
+	// Print Elements in reverse
 	void LinkedList::PrintReverse()
 	{
 		Node* current_ptr = tail_ptr;
@@ -87,5 +97,4 @@ namespace NodeP
 			current_ptr = current_ptr->previous;
 		}
 	}
-
 };

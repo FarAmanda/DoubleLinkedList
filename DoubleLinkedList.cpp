@@ -1,5 +1,5 @@
 // DoubleLinkedList.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Group members Amanda Farghli, 
 
 #include <iostream>
 #include "doublelist.h"
@@ -18,8 +18,6 @@ int main()
     std::cout << "Hello your randomly generated linked list is\n";
     list.PrintElements();
     do {
-
-
         std::cout << "\nPlease select one of the menu options below\n"
             << "0 - Exit Menu\n"
             << "1 - Add to tail\n"

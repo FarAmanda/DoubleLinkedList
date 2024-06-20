@@ -1,5 +1,10 @@
 #pragma once
-
+// Documentation for NodeP
+/* Class Node
+*	Ability to create nodes doubly-linked nodes (with a previous and a next)
+		That hold int-type data,
+*		
+*/
 namespace NodeP
 {
 	class Node
